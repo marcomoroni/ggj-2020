@@ -5,9 +5,10 @@ namespace GGJ2020
 	public class SectionManager : MonoBehaviour
 	{
 		public int difficulty;
-
 		private FiniteStateMachine sectionState;
 		private GenerativeData m_generativeData; // set in run manager
+
+		private ElectricBoard electricBoard;
 
 		public void Initialize(GenerativeData generativeData, int difficulty)
 		{
@@ -28,6 +29,10 @@ namespace GGJ2020
 				() => { },
 				(nextState) => { });
 			sectionState.ChangeState("READY");
+
+			// Generate everything
+
+
 		}
 
 		public void BeginSection()
