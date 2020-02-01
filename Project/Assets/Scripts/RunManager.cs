@@ -20,7 +20,7 @@ namespace GGJ2020
 			{
 				debug = true
 			};
-			runState.SetState("READY");
+			runState.SetStateData("READY");
 			runState.SetState("RUNNING",
 				(previousState) =>
 				{
@@ -38,7 +38,7 @@ namespace GGJ2020
 				},
 				() => { },
 				(nextState) => { });
-			runState.SetState("ENDED");
+			runState.SetStateData("ENDED");
 			runState.ChangeState("READY");
 		}
 

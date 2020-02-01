@@ -54,7 +54,7 @@ namespace GGJ2020
 			}
 		}
 
-		public void SetState(string name)
+		public void SetStateData(string name)
 		{
 			SetState(name, (p) => { }, () => { }, (n) => { });
 		}
